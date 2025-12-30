@@ -1,0 +1,685 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 10;
+}
+
+.mainheader {
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    background-color: white;
+    padding-left: 20px;
+    width: 1200px;
+    height: 78px;
+    color: black;
+    gap: 20px;
+    justify-content: space-between;
+    /* 버튼과 로고를 양 끝에 배치 */
+}
+
+.mainheader img {
+    width: 209px;
+    height: 32px;
+}
+
+.mainheader a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+button {
+    font-family: 'Pretendard';
+    width: 93px;
+    height: 32px;
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    border-radius: 10px;
+    padding: 5.5px 16px; /* 좌우 패딩 추가 (필요하면 조정) */
+    font-size: 14px;
+    border: none;
+}
+
+.employment {
+    width: 111.25px;
+    height: 32px;
+    display: block;
+    text-align: center;
+    color: white;
+    background-color: #0084FF;
+    border-radius: 20px;
+}
+
+/* 이미지 컨테이너 */
+.image-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* 넘치는 부분을 숨김 */
+}
+
+/* 배경 이미지 */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 이미지가 컨테이너를 가득 채우도록 설정 */
+}
+
+.future {
+    padding-top: 100px;
+    font-size: 52px;
+    color: black;
+    padding-left: 283px;
+    font-family: 'Pretendard';
+    font-weight: 700;
+}
+
+.future1 {
+    font-size: 52px;
+    font-weight: 700;
+    color: #0084FF;
+    padding-left: 283px;
+    padding-bottom: 36px;
+    font-family: 'Pretendard';
+}
+
+.box {
+    width: 1200px;
+    height: 40px;
+}
+
+span {
+    width: 383.5px;
+    height: 62px;
+}
+
+.text01 {
+    padding-left: 283px;
+}
+
+.span01 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #767676;
+}
+
+.mySwiper {
+    height: 636px; /* 기존 높이 유지 */
+    overflow: visible;
+    /* overflow를 visible로 설정하여 슬라이더들이 밖으로 나가게 함 */
+    margin-left: 283px;
+    position: relative;
+    margin-bottom: 120px;
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+    /* 부드러운 슬라이딩 효과 */
+}
+
+.swiper-slide {
+    width: 580px;
+    flex-shrink: 0;
+    /* 슬라이드가 축소되지 않도록 설정 */
+    margin-right: 20px;
+    /* 슬라이드 간 간격 설정 */
+    box-sizing: border-box;
+}
+
+/* 이미지 크기 설정 */
+.swiper-slide img {
+    width: 100%;
+    /* 이미지가 슬라이드 크기에 맞게 */
+    height: auto;
+    border-radius: 20px;
+}
+
+/* 텍스트 스타일링 */
+.swiper-slide p {
+    font-size: 23px;
+    padding: 10px;
+    width: 100%;
+    /* 텍스트가 슬라이드 크기에 맞게 */
+    text-align: left;
+}
+
+.swiper-slide p:nth-of-type(1) {
+    font-family: 'Pretendard';
+    font-weight: 700;
+}
+.swiper-slide p:nth-of-type(2) {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(118, 118, 118);
+}
+
+main .swiper .swiper-button-prev::after,
+main .swiper .swiper-button-next::after {
+  width: 30px; /* Adjust as desired */
+  height: 30px; /* Adjust as desired */
+  color: black;
+  font-size: 20px;
+  position: relative;
+  left: 10px;
+  bottom: 12px;
+}
+
+.controller {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 200px;
+    color: black;
+}
+
+
+.teamwrap1 {
+    padding-top: 110px;
+    font-family: 'Pretendard';
+    padding-left: 283px;
+}
+
+.teamwrap1 p {
+    width: 615px;
+    height: 51px;
+    font-weight: 700;
+    color: black;
+}
+
+.teamwrap1 a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+.teamwrap {
+    background-color: #DAEDFF;
+    width: 100%;
+    height: 438.88px;
+    display: flex;
+}
+.teamwrap span {
+    font-size: 38px;
+}
+.teamwrap button {
+    margin-top: 35px;
+    width: 169.05px;
+    height: 48px;
+    background-color: black;
+    color: white;
+    display: flex; /* Flexbox로 설정 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    border-radius: 20px;
+    font-size: 16px;
+    border: none;
+}
+
+.sup {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 120px;
+    margin-bottom: 100px;
+    position: relative; /* position을 relative로 설정하여 위로 올라가도록 */
+}
+
+.sup p {
+    font-family: 'Pretendard';
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.sup p:nth-of-type(1) {
+    color: #0084FF;
+    font-weight: 700;
+}
+
+.imagewrap1 {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    margin: 0 auto;
+    display: flex;
+    gap: 13px;
+    margin-bottom: 100px;
+    height: 308px;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* imagewrap1에도 relative 속성 적용 */
+}
+
+.imagewrap1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.grosup {
+    background-image: url(../images/001.png);
+    background-size: 100%;
+    background-position: bottom; /* 하단에 위치 */
+    background-repeat: no-repeat; /* 반복 없애기 */
+    background-color: #0084FF;
+    border-radius: 20px;
+    width: 592px;
+    height: 382px;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    padding: 20px;
+}
+
+.groptext {
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(149, 204, 255);
+}
+.grosup button {
+    margin-top: 20px;
+    width: 112px;
+    height: 40px;
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    background-color: #369eff;
+    border-radius: 10px;
+    color: white;
+    padding: 0 16px; /* 좌우 패딩 추가 (필요하면 조정) */
+    font-size: 14px;
+    border: none;
+}
+
+.grosup1 button {
+    margin-top: 20px;
+    width: 112px;
+    height: 40px;
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    background-color: #98cdff;
+    border-radius: 10px;
+    padding: 0 16px; /* 좌우 패딩 추가 (필요하면 조정) */
+    font-size: 14px;
+    border: none;
+}
+
+.grosup3 {
+    background-image: url(../images/003.png);
+    background-size: 100%;
+    background-position: bottom;
+    /* 하단에 위치 */
+    background-repeat: no-repeat;
+    /* 반복 없애기 */
+    width: 592px;
+    height: 382px;
+    justify-content: center;
+    /* 수평 중앙 정렬 */
+    align-items: center;
+    /* 수직 중앙 정렬 */
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #223445;
+}
+.grosup3 p {
+    font-weight: 700;
+    font-size: 23px;
+    color: white;
+}
+.grosup3 p:nth-of-type(1) {
+    color: #0084FF;
+    font-size: 16px;
+}
+.grosup3 button {
+    margin-top: 20px;
+    width: 112px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    /* 세로 중앙 정렬 */
+    justify-content: center;
+    /* 가로 중앙 정렬 */
+    background-color: #284f74;
+    border-radius: 10px;
+    color: white;
+    padding: 0 16px;
+    /* 좌우 패딩 추가 (필요하면 조정) */
+    font-size: 14px;
+    /* 글자 크기 조정 (필요시) */
+    border: none;
+    /* 테두리 없애기 */
+}
+
+.grosup4 button {
+    margin-top: 20px;
+    width: 112px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    /* 세로 중앙 정렬 */
+    justify-content: center;
+    /* 가로 중앙 정렬 */
+    background-color: #55adff4d;
+    border-radius: 10px;
+    color: white;
+    padding: 0 16px;
+    /* 좌우 패딩 추가 (필요하면 조정) */
+    font-size: 14px;
+    /* 글자 크기 조정 (필요시) */
+    border: none;
+    /* 테두리 없애기 */
+}
+
+.grop {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-size: 23px;
+    color: white;
+    /* 텍스트 색상 */
+    margin: 0 auto;
+    /* 기본 마진 제거 */
+    line-height: 1.5;
+    /* 텍스트의 줄 간격 조정 */
+}
+
+.grosup1 {
+    background-image: url(../images/002.png);
+    background-size: 100%;
+    background-position: bottom;
+    /* 하단에 위치 */
+    background-repeat: no-repeat;
+    /* 반복 없애기 */
+    width: 592px;
+    height: 382px;
+    justify-content: center;
+    /* 수평 중앙 정렬 */
+    align-items: center;
+    /* 수직 중앙 정렬 */
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #E5F2FF;
+}
+.grosup1 p {
+    font-size: 23px;
+    font-weight: 700;
+    font-family: 'Pretendard';
+}
+.grosup1 p:nth-of-type(1) {
+    color: #0084FF;
+    font-size: 16px;
+    font-family: 'Pretendard';
+}
+
+.grosup4 {
+    background-image: url(../images/004.png);
+    background-size: 100%;
+    background-position: bottom;
+    /* 하단에 위치 */
+    background-repeat: no-repeat;
+    /* 반복 없애기 */
+    width: 592px;
+    height: 382px;
+    justify-content: center;
+    /* 수평 중앙 정렬 */
+    align-items: center;
+    /* 수직 중앙 정렬 */
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #0084FF;
+}
+.grosup4 p {
+    font-family: 'Pretendard';
+    font-size: 23px;
+    font-weight: 700;
+    color: white;
+}
+
+.grosup4 p:nth-of-type(1) {
+    font-size: 16px;
+    font-family: 'Pretendard';
+}
+
+.way {
+    width: 1200px;
+    font-size: 38px;
+    margin: 0 auto;
+    margin-top: 170px;
+    font-family: 'Pretendard';
+    font-weight: 700;
+}
+
+.waywrap {
+    display: flex;
+    gap: 13px;
+    margin: 0 auto;
+    height: 354px;
+    justify-content: center;
+    /* 수평 가운데 정렬 */
+    align-items: center;
+    /* 수직 가운데 정렬 */
+    flex-wrap: wrap;
+    /* 화면 크기에 맞게 자동으로 줄 바꿈 */
+    margin-bottom: 100px;
+}
+
+.way1 {
+    width: 389px;
+    font-family: 'Pretendard';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 이미지와 텍스트를 가운데 정렬 */
+}
+.way1 img {
+    width: 389px;
+    height: 195px;
+    border-radius: 20px 20px 0 0;
+}
+
+.address {
+    font-size: 23px;
+    margin-top: 34px;
+    font-family: 'Pretendard';
+    justify-content: center;
+    /* 가로 중앙 정렬 */
+    align-items: center;
+    /* 세로 중앙 정렬 */
+    font-family: 'Pretendard';
+    font-weight: 700;
+}
+
+.address1 {
+    font-size: 16px;
+    padding: 0px 34px;
+    color: #767676;
+    margin-top: 10px;
+    justify-content: center;
+    /* 가로 중앙 정렬 */
+    align-items: center;
+    /* 세로 중앙 정렬 */
+}
+
+.hapryu {
+    width: 100%;
+    height: 280px;
+    background-image: url(../images/bg_footer.jpeg);
+    background-size: 100%;
+    display: block;
+    text-align: center;
+    font-size: 38px;
+    background-position: bottom;
+    /* 하단에 위치 */
+    background-repeat: no-repeat;
+    /* 반복 없애기 */
+}
+.hapryu p {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-size: 38px;
+    padding-top: 90px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.hapryu button {
+    background-color: #0084FF;
+    display: flex;
+    /* flex로 변경 */
+    align-items: center;
+    /* 세로 중앙 정렬 */
+    justify-content: center;
+    /* 가로 중앙 정렬 */
+    margin: 0 auto;
+    width: 221.34px;
+    height: 56px;
+    margin-top: 20px;
+    color: white;
+    padding: 14.5px 36px;
+    /* 수평 패딩 */
+    border-radius: 28px;
+    font-size: 18px;
+    border: none;
+    /* 버튼 테두리 제거 */
+}
+.hapryu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+
+footer {
+    width: 544px;
+    padding: 28px 40px 60px;
+    margin-left: 283px;
+}
+
+footer p:nth-child(1) {
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-family: 'Pretendard';
+}
+
+.fp2 {
+    width: 544px;
+    font-size: 13px;
+    color: #8c8c8c;
+}
+
+footer a {
+    color: #8c8c8c;
+}
+
+.footext {
+    padding-top: 28px;
+    color: #8c8c8c;
+    font-size: 12px;
+}
+
+.linklist {
+    margin-top: 50px;
+    display: flex;
+    gap: 12px;
+}
+
+.linklist img {
+    width: 36px;
+    height: 36px;
+}
+
+.gotop {
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    background-color: #333;
+    background: none;
+    display: none;
+    z-index: 10;
+}
